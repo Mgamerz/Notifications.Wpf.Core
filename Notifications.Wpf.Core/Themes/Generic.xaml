@@ -14,7 +14,11 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <TextBlock Text="&#9932;" FontSize="12" />
+                    <TextBlock Text="&#9932;" FontSize="12" >
+                        <TextBlock.Effect>
+                            <DropShadowEffect ShadowDepth="1" RenderingBias="Performance" Color="Black"/>
+                        </TextBlock.Effect>
+                    </TextBlock>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
@@ -39,11 +43,23 @@
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
                         <ContentControl Margin="0,0,12,0" Width="25" Height="25" VerticalAlignment="Top">
-                            <ContentControl x:Name="Icon" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                        </ContentControl>
+                            <ContentControl x:Name="Icon" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                                <ContentControl.Effect>
+                                    <DropShadowEffect ShadowDepth="1" RenderingBias="Performance" Color="Black"/>
+                                    </ContentControl.Effect>
+                            </ContentControl>
+                            </ContentControl>
                         <DockPanel Grid.Column="1">
-                            <TextBlock DockPanel.Dock="Top" Text="{Binding Title}" FontWeight="Medium" TextTrimming="CharacterEllipsis" />
-                            <TextBlock Text="{Binding Message}" TextWrapping="Wrap" Opacity=".8" Margin="0,0,12,0" />
+                            <TextBlock DockPanel.Dock="Top" Text="{Binding Title}" FontWeight="Medium" TextTrimming="CharacterEllipsis" >
+                                <TextBlock.Effect>
+                                    <DropShadowEffect ShadowDepth="1" RenderingBias="Performance" Color="Black"/>
+                                </TextBlock.Effect>
+                            </TextBlock>
+                            <TextBlock Text="{Binding Message}" TextWrapping="Wrap" Opacity="1" Margin="0,0,12,0">
+                                <TextBlock.Effect>
+                                    <DropShadowEffect ShadowDepth="1" RenderingBias="Performance" Color="Black"/>
+                                </TextBlock.Effect>
+                            </TextBlock>
                         </DockPanel>
                     </Grid>
                 </Border>
