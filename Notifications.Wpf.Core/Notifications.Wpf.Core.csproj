@@ -20,6 +20,7 @@
     <FileVersion>1.3.2.0</FileVersion>
     <GenerateDocumentationFile>false</GenerateDocumentationFile>
     <Platforms>x64</Platforms>
+    <Configurations>Debug;Release;WinRelease</Configurations>
   </PropertyGroup>
 
 
